@@ -38,24 +38,25 @@ presentation/
 
 这些目录和导航页应由后续真实内容、检索入口和治理规则推导出来。
 
-## 最简单的使用方式
+## 直接复制给 Agent 使用
 
-如果你的 Agent 可以读取 GitHub 仓库，可以直接把下面这段话发给 Agent：
+把下面这句话复制给 Agent：
 
 ```text
 请你按照 https://github.com/Wcof/myknowledge-skill 这个 skill 项目初始化当前项目。
-
-要求：
-1. 先读取该仓库的 SKILL.md。
-2. 再读取 references/structure-template.md。
-3. 只创建 raw、wiki、system 三个目录，以及 AGENTS.md、CLAUDE.md、system/AGENTS.md、system/CLAUDE.md、system/wiki-harness.md、system/wiki-governance.md、wiki/log.md、wiki/governance-log.md、raw/llm-wiki.md。
-4. 不要创建 wiki/index.md、主题目录、presentation 目录、.agents、.claude、.obsidian 或 .git。
-5. 初始化完成后，后续整理知识库时必须先读取 system/wiki-harness.md。
 ```
 
-## 安装到 Codex Skills
+Agent 应该读取这个仓库里的 `SKILL.md` 和 `references/structure-template.md`，然后在当前项目里初始化 MyKnowledge 最小骨架。
 
-如果你希望 Agent 自动识别这个 skill，可以把仓库复制到本地 skills 目录。
+如果你想更明确一点，也可以这样说：
+
+```text
+请你按照 https://github.com/Wcof/myknowledge-skill 这个 skill 项目初始化当前项目。只初始化最小 MyKnowledge 骨架，不要创建主题目录、wiki/index.md、presentation、.agents、.claude、.obsidian 或 .git。
+```
+
+## 可选：安装到 Codex Skills
+
+如果你希望 Agent 以后自动识别 `$myknowledge-skill`，可以把仓库复制到本地 skills 目录。
 
 ```bash
 mkdir -p ~/.codex/skills
