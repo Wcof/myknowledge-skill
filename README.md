@@ -23,21 +23,6 @@ system/
   wiki-governance.md
 ```
 
-默认不会创建：
-
-```text
-wiki/index.md
-wiki/01、产品PM/
-wiki/02、工作任务/
-presentation/
-.agents/
-.claude/
-.obsidian/
-.git/
-```
-
-这些目录和导航页应由后续真实内容、检索入口和治理规则推导出来。
-
 ## 直接复制给 Agent 使用
 
 把下面这句话复制给 Agent：
@@ -54,26 +39,6 @@ Agent 应该读取这个仓库里的 `SKILL.md` 和 `references/structure-templa
 请你按照 https://github.com/Wcof/myknowledge-skill 这个 skill 项目初始化当前项目。只初始化最小 MyKnowledge 骨架，不要创建主题目录、wiki/index.md、presentation、.agents、.claude、.obsidian 或 .git。
 ```
 
-## 可选：安装到 Codex Skills
-
-如果你希望 Agent 以后自动识别 `$myknowledge-skill`，可以把仓库复制到本地 skills 目录。
-
-```bash
-mkdir -p ~/.codex/skills
-git clone git@github.com:Wcof/myknowledge-skill.git ~/.codex/skills/myknowledge-skill
-```
-
-之后可以这样对 Agent 说：
-
-```text
-使用 $myknowledge-skill 初始化当前目录为 MyKnowledge 风格知识库。
-```
-
-或者：
-
-```text
-使用 $myknowledge-skill 整理这段原始会议记录：……
-```
 
 ## 初始化后的工作方式
 
