@@ -1,0 +1,7 @@
+interface:
+  display_name: "MyKnowledge Skill"
+  short_description: "Govern local Markdown knowledge bases"
+  default_prompt: "Use $myknowledge-skill to initialize and govern a local Markdown knowledge base."
+
+policy:
+  allow_implicit_invocation: true
